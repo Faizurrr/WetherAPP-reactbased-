@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg ${
-        mode === "dark" ? "navbar-dark bg-dark" : "navbar-light bg-light"
+        mode === "dark" ? "navbar-dark bg-dark fixed-top" : "navbar-light bg-light fixed-top"
       }`}
     >
       <div className="container-fluid">
@@ -48,11 +48,16 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about">
-                About
+                About App
+              </Link>
+            </li>
+          
+            <li className="nav-item">
+              <Link className="nav-link" to="/Aboutauthor">
+                About Developer
               </Link>
             </li>
           </ul>
-
           {/* ✅ Toggle Switch */}
           <div className="form-check form-switch text-nowrap">
             <input
