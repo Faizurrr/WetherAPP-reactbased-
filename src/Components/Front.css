@@ -1,0 +1,113 @@
+
+
+/* Body layout */
+body {
+  margin: 0 !important;
+  height: 100vh;
+  
+
+  
+  font-family: Arial, sans-serif; /* override bootstrap font if needed */
+}
+
+/* Weather main container */
+.Weather_main {
+  place-self: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #2f4680, #500ae4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-top: 150px;
+}
+
+/* Search bar container */
+.Search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 300px;
+  background: white !important; /* override bootstrap bg */
+  padding: 8px 12px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styling (Bootstrap overrides form-control, so force overrides) */
+.Search_bar input {
+  height: 25px !important;
+  width: 200px ;
+  border: none !important;
+  outline: none !important;
+  border-radius: 40px !important;
+  padding: 0 15px !important;
+  font-size: 16px !important;
+  box-shadow: none !important;
+  background: transparent ;
+  color: #333 ;
+}
+
+/* Search icon */
+.Search_bar img {
+  width: 24px !important;
+  height: 24px !important;
+  cursor: pointer;
+
+}
+
+/* Temperature text */
+.Temperature {
+  font-size: 48px !important;
+  color: #fff !important;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* City name */
+.City {
+  font-size: 35px !important;
+  color: #fff !important;
+  text-align: center;
+  margin-top: 5px;
+}
+.country{
+  font-size: 25px;
+}
+
+/* Weather details container */
+.weather-details {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Each detail item */
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+
+/* Icons inside detail items */
+.detail-item img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+/* Centered weather icon container */
+.Clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.Clear img {
+  width: 120px;
+  height: auto;
+}
