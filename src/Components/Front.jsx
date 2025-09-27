@@ -93,9 +93,12 @@ const Front = () => {
         <div className='Clear'>
           <img src={getWeatherIcon()} alt="weather icon" />
         </div>
-
+         
+        
         {weather && weather.main ? (
           <>
+          
+            
             <div className="Temperature">{Math.round(weather.main.temp)}°C</div>
             <div className="City">{weather.name}
               <div className="country">{weather.sys.country}</div>
