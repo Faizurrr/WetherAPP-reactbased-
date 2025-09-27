@@ -36,7 +36,7 @@ const Front = () => {
       setBackground(data.weather[0].main.toLowerCase()); // 👈 background set
     } catch (error) {
       console.error("Error fetching weather:", error);
-      alert("Something went wrong. Please try again.");
+      alert("Something went wrong. Please try again. or No internet Connection");
     }
   };
 
@@ -45,13 +45,13 @@ const Front = () => {
 
     const setBackground = (main) => {
   if (main.includes("clouds")) {
-    document.body.style.backgroundImage = "url('/backgrounds/Clouds.jpg')";
+    document.body.style.backgroundImage = "url('/WetherAPP-reactbased-/backgrounds/Clouds.jpg')";
   } else if (main.includes("rain")) {
-    document.body.style.backgroundImage = "url('/backgrounds/rain.jpg')";
+    document.body.style.backgroundImage = "url('/WetherAPP-reactbased-/backgrounds/rain.jpg')";
   } else if (main.includes("snow")) {
-    document.body.style.backgroundImage = "url('/backgrounds/snow.jpg')";
+    document.body.style.backgroundImage = "url('/WetherAPP-reactbased-/backgrounds/snow.jpg')";
   } else {
-    document.body.style.backgroundImage = "url('/backgrounds/clear.jpg')";
+    document.body.style.backgroundImage = "url('/WetherAPP-reactbased-/backgrounds/clear.jpg')";
   }
 
   document.body.style.backgroundSize = "cover"; 
