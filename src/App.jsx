@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         {/* Default route (Front as Home) */}
-        <Route path="/" element={<Front />} />
+        <Route path="/WetherAPP-reactbased-/" element={<Front />} />
         {/* About page */}
         <Route path="/about" element={<About />} />
       
