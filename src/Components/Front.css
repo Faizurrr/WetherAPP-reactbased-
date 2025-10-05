@@ -15,58 +15,140 @@ body {
   
 
   
-  
-
-
-/* Weather main container */
+  /* 🌤 Weather main container */
 .Weather_main {
   place-self: center;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 20px 25px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #3b4cca, #8f6ed5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  margin-top: 120px;
+  min-height: 45vh;
 
-  background-image: linear-gradient(45deg, #2f4680, #500ae4);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin-top: 150px;
-   
-  min-height: 40vh; 
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 90%;
+  max-width: 450px;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Search bar container */
+.Weather_main:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* 🌐 Responsive design for Weather_main */
+@media (max-width: 768px) {
+  .Weather_main {
+    width: 95%;
+    margin-top: 90px;
+    padding: 15px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Weather_main {
+    width: 100%;
+    margin-top: 70px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    min-height: 50vh;
+  }
+}
+
+/* 🔍 Search bar container */
 .Search_bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 300px;
-  background: white !important; /* override bootstrap bg */
-  padding: 8px 12px;
-  border-radius: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 8px 15px;
+  border-radius: 40px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 25px auto;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Input styling (Bootstrap overrides form-control, so force overrides) */
+/* 🧭 Input box */
 .Search_bar input {
-  height: 25px !important;
-  width: 200px ;
-  border: none !important;
-  outline: none !important;
-  border-radius: 40px !important;
-  padding: 0 15px !important;
-  font-size: 16px !important;
-  box-shadow: none !important;
-  background: transparent ;
-  color: #333 ;
+  flex: 1;
+  height: 38px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
 }
 
-/* Search icon */
+.Search_bar input::placeholder {
+  color: #888;
+}
+
+/* 🔍 Search icon */
 .Search_bar img {
-  width: 24px !important;
-  height: 24px !important;
+  width: 26px;
+  height: 26px;
   cursor: pointer;
-
+  transition: transform 0.2s ease;
 }
+
+.Search_bar img:hover {
+  transform: scale(1.1);
+}
+
+/* 💡 Focus effect */
+.Search_bar input:focus {
+  background: #f7f7f7;
+  box-shadow: 0 0 6px rgba(80, 10, 228, 0.3);
+  border-radius: 30px;
+}
+
+/* 📱 Responsive search bar */
+@media (max-width: 768px) {
+  .Search_bar {
+    max-width: 320px;
+    padding: 6px 12px;
+  }
+
+  .Search_bar input {
+    font-size: 15px;
+  }
+
+  .Search_bar img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Search_bar {
+    flex-direction: row;
+    width: 90%;
+    max-width: none;
+    padding: 8px 10px;
+  }
+
+  .Search_bar input {
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .Search_bar img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 
 /* Temperature text */
 .Temperature {
